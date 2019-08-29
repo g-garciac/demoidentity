@@ -1,0 +1,20 @@
+﻿@model System.String
+@{
+    ViewData["Title"] = "Informacion";
+}
+
+<h2>@Model</h2>
+
+@if (Model.Contains("Principal"))
+{
+    @Html.ActionLink("Funcion no restringida", "Funcion1")
+    <br />
+    @Html.ActionLink("Funcion restringida", "Funcion2")
+    <br />
+}
+else
+{
+    <div>
+        <a asp-action="Index">Regresar a Principal</a>
+    </div>
+}
